@@ -2,6 +2,7 @@
 layout: post
 title: Lecture clicker synthesizer control
 comments: true
+category: projects
 ---
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/u6zVi9VvFng" frameborder="0" allowfullscreen></iframe>
@@ -13,6 +14,7 @@ A while back, I took a Biology class that required the use of "clickers" -- litt
 ![The Turning Technologies ResponseCard RF LCD]({{ site.baseurl }}/images/responsecard_rf.png)
 
 Most students in classes that require clickers will buy a clicker for $50 or so, use it for a quarter, and then forget about it deep in their backpacks. The technology is proprietary, so while the [documents filed with the FCC](https://fccid.io/R4WRCRF03) are informative on a surface level, the application was also granted long-term confidentiality and the inner workings of the device are not public.
+
 
 Former work
 -----------
