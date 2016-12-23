@@ -1,4 +1,4 @@
----
+---`
 layout: post
 title: Using your own hardware with CenturyLink Fiber
 comments: true
@@ -14,16 +14,16 @@ Necessary features
 ------------------
 To connect your own hardware to the CenturyLink ONT, your router needs to support two things:
 
-  1) Logging into the ONT via PPPoE
-  2) VLAN tagging over the WAN port, since the ONT expects all packets between it and the router to be tagged with VLAN ID 201
+1. Logging into the ONT via PPPoE
+2. VLAN tagging over the WAN port, since the ONT expects all packets between it and the router to be tagged with VLAN ID 201
 
 PPPoE
 -----
 Getting our PPPoE credentials was the easy part. I found [this post](https://n8henrie.com/2015/01/how-to-find-your-centurylink-ppp-password-on-a-zyxel-c1000z-modem/) detailing a couple ways to get that information. In short:
 
-  1) Enable telnet on the ZyXEL device
-  2) Open a standard shell with `sh`, then `/usr/bin/pidstat -l -C pppd` to see the username and base64-encoded password provided to the pppd process.
-  3) Decode the password: `echo "encoded_password" | base64 --decode`
+1. Enable telnet on the ZyXEL device
+2. Open a standard shell with `sh`, then `/usr/bin/pidstat -l -C pppd` to see the username and base64-encoded password provided to the pppd process.
+3. Decode the password: `echo "encoded_password" | base64 --decode`
 
 I saved these credentials for later.
 
