@@ -15,4 +15,4 @@ Before college, I blogged [here](http://www.gnewt.at/blog/). Some of my favorite
 
 ### Contact me
 
-[nmooney@cs.washington.edu](nmooney@cs.washington.edu)
+[nmooney@cs.washington.edu](mailto:nmooney@cs.washington.edu)
