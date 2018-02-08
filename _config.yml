@@ -17,6 +17,8 @@ disqus:
   shortname: nick-mooney
 google_analytics: UA-87475309-1
 
+permalink: /:title/
+
 # Build settings
 markdown: kramdown
 kramdown:
