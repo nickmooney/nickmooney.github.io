@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-I'm currently pursuing a B.S. in Computer Science at the University of Washington in Seattle, as well as working on the [Labs/R&D](https://duo.com/labs) team at [Duo Security](https://duo.com/). I like security, code that has tangible effects in the real world, and code that is silly on purpose.
+I work on the [Labs/R&D](https://duo.com/labs) team at [Duo Security](https://duo.com/). I like security, code that has tangible effects in the real world, and code that is silly on purpose.
 
 ### Old projects
 Before college, I blogged [here](http://www.gnewt.at/). Some of my favorite projects from that time are:
