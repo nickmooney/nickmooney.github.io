@@ -10,7 +10,9 @@ Before Duo, I attended the University of Washington where I got a B.S. in Comput
 
 ### Some other writing
 
+* [What's an EdDSA?](https://duo.com/labs/tech-notes/whats-an-eddsa)
 * [Santa Leaves The Kernel: A macOS Endpoint Security Introduction and Case Study](https://duo.com/labs/tech-notes/santa-leaves-the-kernel-a-macos-endpoint-security-introduction-and-case-study)
+* [Protecting Accounts from Credential Stuffing](https://duo.com/labs/tech-notes/protecting-accounts-from-credential-stuffing), co-authored with Jordan Wright
 * [Introduction to the Noise Protocol Framework](https://duo.com/labs/tech-notes/noise-protocol-framework-intro)
 * [An Exploration of 2P-ECDSA](https://duo.com/labs/tech-notes/2p-ecdsa-explained), a threshold ECDSA scheme
 * [U2F Key Support in OpenSSH](https://duo.com/labs/tech-notes/u2f-key-support-in-openssh)
