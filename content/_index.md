@@ -2,7 +2,7 @@
 title: Home
 ---
 
-Hi! My name is Nick, and I'm currently a senior software engineer on the Cloud information security engineering team at Google. At work I hunt bugs, help product engineers develop threat modeling and adversarial thinking skills, and work with product architects to make secure, sound architectural decisions as early in the engineering process as possible.
+Hi! My name is Nick, and I'm currently a senior software engineer securing Google Cloud. At work I hunt bugs, help product engineers develop threat modeling and adversarial thinking skills, and work with product architects to make secure, sound architectural decisions as early in the engineering process as possible.
 
 Before Google, I was a senior research engineer on the Labs team at Duo Security, and before Duo I attended the University of Washington in Seattle.
 

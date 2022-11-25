@@ -1,6 +1,6 @@
 baseURL = "https://nickmooney.com"
 languageCode = "en-us"
-title = "Nick Mooney | Security and summer camp (but not at the same time)"
+title = "Nick Mooney"
 theme = "xmin"
 
 [permalinks]

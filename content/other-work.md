@@ -1,6 +1,6 @@
 ---
-title: Other work
-url: /about/
+title: Work published elsewhere
+url: /elsewhere/
 menu: main
 ---
 
