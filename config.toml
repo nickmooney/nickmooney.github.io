@@ -1,0 +1,17 @@
+baseURL = "https://nickmooney.com"
+languageCode = "en-us"
+title = "Nick Mooney | Security and summer camp (but not at the same time)"
+theme = "xmin"
+
+[permalinks]
+  post = ':slug/'
+
+[menu]
+[[menu.main]]
+  identifier = 'main'
+  name = 'Main'
+  url = ''
+  weight = -110
+
+[params]
+  footer = "&copy; [Nick Mooney](https://nickmooney.com) 2016 -- {Year} | [Twitter](https://twitter.com/wellhydrated) | [Mastodon](https://hachyderm.io/@wellhydrated)"
