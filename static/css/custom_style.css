@@ -7,3 +7,13 @@
     margin-block-end: 0em;
     margin-block-start: 0em;
 }
+
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu li {
+  margin: 0 2px; /* or whatever */
+}
