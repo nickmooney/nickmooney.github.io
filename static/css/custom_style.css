@@ -17,3 +17,7 @@
 .menu li {
   margin: 0 2px; /* or whatever */
 }
+
+body {
+  font-family: Roboto, Arial, sans-serif;
+}
