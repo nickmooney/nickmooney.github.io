@@ -21,3 +21,8 @@
 body {
   font-family: Roboto, Arial, sans-serif;
 }
+
+p.md__image {
+  display: flex;
+  justify-content: center;
+}
