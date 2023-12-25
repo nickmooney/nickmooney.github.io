@@ -14,7 +14,7 @@ theme = "xmin"
   weight = -110
 
 [params]
-  footer = "&copy; [Nick Mooney](https://nickmooney.com) 2016 -- {Year} | [Twitter](https://twitter.com/wellhydrated) | <a rel=\"me\" href=\"https://hachyderm.io/@wellhydrated\">Mastodon</a>"
+  footer = "&copy; [Nick Mooney](https://nickmooney.com) 2016 -- {Year} | [Twitter](https://twitter.com/wellhydrated)"
 
 [markup.goldmark.renderer]
   unsafe = true
