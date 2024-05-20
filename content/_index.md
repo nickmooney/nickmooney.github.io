@@ -10,6 +10,6 @@ Before Google, I was a senior research engineer on the Labs team at Duo Security
 
 ### Contact me
 
-* [nmooney@cs.washington.edu](mailto:nmooney@cs.washington.edu)
+* [nick@mooney.nz](mailto:nick@mooney.nz)
 * [@wellhydrated on Twitter](https://twitter.com/wellhydrated)
 * [LinkedIn](https://www.linkedin.com/in/njmooney/)
