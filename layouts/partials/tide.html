@@ -1,0 +1,19 @@
+<span id="tide-height">...</span>
+
+<script>
+;(async function(){
+  try {
+    const res = await fetch(
+      'https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?date=latest&station=9447130&product=water_level&datum=MLLW&time_zone=gmt&units=english&format=json'
+    );
+    if (!res.ok) throw new Error(res.statusText);
+    const { data } = await res.json();
+    const height = parseFloat(data[0].v).toFixed(2);
+    document.getElementById('tide-height').textContent =
+      `The tidal height is currently ${height} ft above Mean Lower Low Water.`;
+  } catch (e) {
+    console.error('Tide fetch error:', e);
+    document.getElementById('tide-height').textContent = '';
+  }
+})();
+</script>

@@ -2,9 +2,11 @@
 title: Home
 ---
 
-My name is Nick. I currently work at Google in Seattle securing the Cloud platform. At work I hunt bugs, help product engineers develop threat modeling and adversarial thinking skills, and work with product and infrastructure architects to make secure, sound design decisions as early in the engineering process as possible.
+Hey, my name is Nick. {{< tide >}}
 
-Before Google, I was a senior research engineer on the Labs team at Duo Security, and before Duo I attended the University of Washington in Seattle.
+I'm a software engineer at Google securing the Cloud platform. At work I hunt bugs, help product engineers develop threat modeling and adversarial thinking skills, and work with product and infrastructure architects to make secure, sound design decisions as early in the engineering process as possible.
+
+I am a pilot and a diver and I love the northwest. Before Google, I was a senior research engineer on the Labs team at Duo Security, and before Duo I attended the University of Washington in Seattle.
 
 ### Contact me
 
