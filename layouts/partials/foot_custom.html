@@ -1,3 +1,6 @@
+<!-- Timezone Clock -->
+<div id="timezone-clock"></div>
+
 <script>
 MathJax = {
   tex: {
@@ -7,3 +10,33 @@ MathJax = {
 </script>
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<script>
+// Dual timezone clock
+function updateClock() {
+  const now = new Date();
+  
+  // Seattle (Pacific Time)
+  const seattle = new Intl.DateTimeFormat('en-US', {
+    timeZone: 'America/Los_Angeles',
+    hour: '2-digit',
+    minute: '2-digit',
+    hour12: false
+  }).format(now);
+  
+  // Auckland (New Zealand Time)
+  const auckland = new Intl.DateTimeFormat('en-US', {
+    timeZone: 'Pacific/Auckland',
+    hour: '2-digit',
+    minute: '2-digit',
+    hour12: false
+  }).format(now);
+  
+  document.getElementById('timezone-clock').innerHTML = 
+    `<span class="timezone-item">SEA ${seattle}</span> • <span class="timezone-item">AKL ${auckland}</span>`;
+}
+
+// Update immediately and then every minute
+updateClock();
+setInterval(updateClock, 60000);
+</script>

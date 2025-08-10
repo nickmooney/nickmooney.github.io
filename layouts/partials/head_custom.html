@@ -1,1 +1,38 @@
 <link rel="stylesheet" href="{{ "css/custom_style.css" | relURL }}" />
+<script>
+(function() {
+  // Oceanic color palette: base colors and hover colors
+  const colorPairs = [
+    { base: '#055a8c', hover: '#53a4f5' }, // Deep blue / Sky blue (original)
+    { base: '#1B5E20', hover: '#4CAF50' }, // Deep teal / Sea foam
+    { base: '#01579B', hover: '#29B6F6' }, // Navy / Light blue
+    { base: '#004D40', hover: '#26A69A' }, // Deep sea green / Turquoise
+    { base: '#263238', hover: '#607D8B' }, // Storm blue / Slate
+    { base: '#0D47A1', hover: '#42A5F5' }, // Royal blue / Bright blue
+    { base: '#2E7D32', hover: '#66BB6A' }  // Ocean green / Mint
+  ];
+  
+  // Check for dev color override in URL
+  const urlParams = new URLSearchParams(window.location.search);
+  const devColor = urlParams.get('color');
+  
+  let colorIndex;
+  if (devColor === 'random') {
+    colorIndex = Math.floor(Math.random() * colorPairs.length);
+  } else if (devColor && !isNaN(devColor)) {
+    colorIndex = Math.max(0, Math.min(parseInt(devColor) - 1, colorPairs.length - 1));
+  } else {
+    // Default: get day of year (1-365/366) for consistent daily rotation
+    const now = new Date();
+    const start = new Date(now.getFullYear(), 0, 0);
+    const diff = now - start;
+    const dayOfYear = Math.floor(diff / (1000 * 60 * 60 * 24));
+    colorIndex = dayOfYear % colorPairs.length;
+  }
+  const colors = colorPairs[colorIndex];
+  
+  // Set CSS custom properties
+  document.documentElement.style.setProperty('--link-color', colors.base);
+  document.documentElement.style.setProperty('--link-hover-color', colors.hover);
+})();
+</script>
