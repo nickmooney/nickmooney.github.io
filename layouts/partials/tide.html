@@ -8,9 +8,11 @@
     );
     if (!res.ok) throw new Error(res.statusText);
     const { data } = await res.json();
-    const height = parseFloat(data[0].v).toFixed(2);
+    const height = parseFloat(data[0].v);
+    const heightAbs = Math.abs(height).toFixed(2);
+    const direction = height > 0 ? "above" : "below";
     document.getElementById('tide-height').textContent =
-      `The tidal height is currently ${height} ft above Mean Lower Low Water.`;
+        `The tidal height is currently ${heightAbs} ft ${direction} Mean Lower Low Water.`;
   } catch (e) {
     console.error('Tide fetch error:', e);
     document.getElementById('tide-height').textContent = '';
