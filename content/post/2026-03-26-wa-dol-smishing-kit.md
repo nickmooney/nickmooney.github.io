@@ -21,9 +21,9 @@ Yesterday I got this text message:
 >
 > hxxps://wa.gov-ngf[.]cfd/[redacted]
 
-The domain is `wa.gov-ngf.cfd` - the subdomain is designed to look like it begins with `wa.gov`, and `.cfd` is a cheap new gTLD that shows up frequently in smishing infrastructure. The URL includes a query parameter that I suspect is a per-victim tracking token embedded in each outgoing SMS, letting the operator correlate clicks back to specific phone numbers.
+The domain is `wa.gov-ngf.cfd` - the subdomain is designed to look like it begins with `wa.gov`, and `.cfd` is a cheap new gTLD that shows up frequently in smishing (SMS-based phishing) infrastructure. The URL includes a query parameter that I suspect is a per-victim tracking token embedded in each outgoing SMS, letting the operator correlate clicks back to specific phone numbers.
 
-I clicked the link and ended up on a polished fake DOL payment page. I pulled apart the JavaScript.
+I clicked the link and ended up on a polished fake DOL payment page.
 
 Opening the URL in a desktop browser returned a 404. The same URL on my phone loaded fine. My guess was User-Agent filtering. I tried the laziest possible thing first:
 
@@ -97,7 +97,7 @@ Collecting routing and account numbers alongside card data suggests ACH/debit ta
 
 The kit's internal name appears to be **Sailors**: `sailorsConfig`, `STORAGE_KEY = "sailors_config"`, `STORAGE_KEY = "sailors_form..."`, and CSS classes prefixed `sailors-input-*`. I didn't find any existing public writeups using this name or describing this kit.
 
-The codebase contains Chinese-language error strings - `"解密异常!"` ("decryption exception") and `"为空"` ("is empty"). It fits within the broader Chinese smishing kit ecosystem but doesn't match any documented family. The closest relatives are [Xiū gǒu](https://www.netcraft.com/blog/xiu-gou-phishing-kit/) (Vue.js frontend, Chinese developer artifacts, government impersonation) and the [Smishing Triad / Lighthouse](https://www.resecurity.com/blog/article/smishing-triad-the-largest-fraud-campaign-targeting-citizens-of-the-usa-and-eu) cluster (SMS lures, US government impersonation), but both differ significantly in backend architecture and exfil mechanism. Neither uses Socket.io or FingerprintJS BotD as far as I can tell from public reporting.
+The codebase contains Chinese-language error strings - `"解密异常!"` ("decryption exception") and `"为空"` ("is empty"). It fits within the broader Chinese smishing kit ecosystem but doesn't match any documented family. The closest relatives are [Xiū gǒu](https://www.netcraft.com/blog/doggo-threat-actor-analysis) (Vue.js frontend, Chinese developer artifacts, government impersonation) and the [Smishing Triad / Lighthouse](https://www.resecurity.com/blog/article/smishing-triad-targeted-usps-and-us-citizens-for-data-theft) cluster (SMS lures, US government impersonation), but both differ significantly in backend architecture and exfil mechanism. Neither uses Socket.io or FingerprintJS BotD as far as I can tell from public reporting.
 
 Each victim is assigned a UUID on first visit, stored in AES-encrypted localStorage and passed as a query parameter on the socket connection (`?uuid=...`). The `index.html` includes a `<meta name="keywords">` tag containing a 96-character hex string that the frontend JavaScript never reads - likely a per-deployment identifier consumed server-side.
 
@@ -107,7 +107,7 @@ The domain was registered on 2026-03-25 - the same day I received the SMS - thro
 
 CT logs show three distinct Let's Encrypt certificates issued for `wa.gov-ngf.cfd` on 2026-03-25, with `not_before` timestamps at roughly 13:55, 17:38, and 18:26 UTC - three provisioning events in ~4.5 hours on the day the domain was registered.
 
-I filed an abuse report with Gname and haven't taken any other action against the domain.
+I filed an abuse report with Gname and haven't taken any other action against the domain. (UPDATE: Gname were quick to take this domain down, and another I have reported to them, though threat actors seem to be registering them much faster than manual abuse reports can get them suspended.)
 
 ## Indicators
 
